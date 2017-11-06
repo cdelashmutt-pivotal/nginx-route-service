@@ -1,0 +1,7 @@
+---
+applications:
+- name: nginx-route-service
+  memory: 64M
+  instances: 1
+  health-check-type: http
+  health-check-http-endpoint: /nginx_status
