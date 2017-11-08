@@ -3,9 +3,9 @@
 
 ## Preparing to use the Service
 ### Configuration
-The configuration for NGINX is in the `nginx.conf` file in this repo.  The configuration needs to be modified for your particular setup.  In particular, the `resolver` entry under the `http` block needs to be updated to point to the DNS server for your environment.
+The configuration for NGINX is in the `nginx.conf` file in this repo.
 
-The server is configured to cache to local disk, use local memory to store keys, and retain responses for 1 minute.  This configuration is likely to need to be changed for your application.  Refer to http://nginx.org/en/docs/http/ngx_http_proxy_module.html for more options on configuration.
+By default, the NGINX server will be configured to cache to local disk, use local memory to store keys, and retain responses for 1 minute.  This configuration likely will need to be changed for your application.  Refer to http://nginx.org/en/docs/http/ngx_http_proxy_module.html for more options on configuration.  Particularly, you will probably will be interested in the `location` block inside the `server` block to modify caching parameters.
 
 ### Pushing to Cloud Foundry
 1. Clone this repo.
